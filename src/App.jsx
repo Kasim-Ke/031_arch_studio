@@ -1,7 +1,9 @@
+import Navbar from "./components/navfoot/Navbar";
+
 function App() {
   return (
     <>
-      <h1>hello vite bitch!</h1>
+      <Navbar />
     </>
   );
 }
