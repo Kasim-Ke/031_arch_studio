@@ -10,7 +10,7 @@ body {
 
 .navbar {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: translatex(100%);
+  transform: translatey(100%);
   opacity: 0;
 }
 
