@@ -26,8 +26,8 @@ const HomeHero = () => {
         />
       </div>
 
-      <div className="absolute lg:w-[544px] lg:h-[355px]  top-[180px] left-[355px] flex flex-col justify-between items-start  text-white ">
-        <h1 className="font-bold text-[96px] leading-[80px] tracking-[-2px]  ">
+      <div className="absolute lg:w-[544px] md:w-[457px]  md:h-[355px] md:top-[180px] lg:left-[355px] md:left-[155px] w-[311px] h-[304px] flex flex-col justify-between items-start  text-white ">
+        <h1 className="font-bold md:text-[96px] md:leading-[80px] md:tracking-[-2px]  text-[48px] leading-[48px] tracking-[-1.2px]">
           Project Paramour
         </h1>
         <p className="lg:w-[445px] text-[18px] leading-[24px] ">
