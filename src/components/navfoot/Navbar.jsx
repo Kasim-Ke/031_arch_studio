@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={` absolute top-[100px] right-0 navbar bg-[#EEEFF4] w-[340px] h-[235px] flex justify-center items-center mx-auto md:hidden ${
+        className={` absolute top-[100px] inset-0  z-30 navbar bg-[#EEEFF4] w-[340px] h-[235px] flex justify-center items-center mx-auto md:hidden ${
           nav ? "visible" : ""
         }`}
       >
