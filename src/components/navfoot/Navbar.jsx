@@ -44,7 +44,8 @@ const Navbar = () => {
           nav ? "visible" : ""
         }`}
       >
-        <div className=" flex flex-col items-start w-[247px] h-[154px] font-bold text-[32px]">
+        <div className=" flex flex-col items-start w-[247px] h-[184px] font-bold text-[32px]">
+          <button>Home</button>
           <button>Portfolio</button>
           <button>About Us</button>
           <button>Contact</button>
