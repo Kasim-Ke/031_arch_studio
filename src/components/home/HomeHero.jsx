@@ -94,7 +94,7 @@ const HomeHero = () => {
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         />
         <motion.img
           className="lg:block hidden object-cover"
@@ -105,7 +105,7 @@ const HomeHero = () => {
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         />
         <motion.img
           className="md:block lg:hidden hidden object-cover"
@@ -116,7 +116,7 @@ const HomeHero = () => {
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         />
         <motion.img
           className="block md:hidden object-cover"
@@ -127,7 +127,7 @@ const HomeHero = () => {
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         />
       </div>
 
@@ -141,7 +141,7 @@ const HomeHero = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.6 }}
           >
             {current.title}
           </motion.h1>
@@ -152,7 +152,7 @@ const HomeHero = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.6 }}
           >
             {current.description}
           </motion.p>
