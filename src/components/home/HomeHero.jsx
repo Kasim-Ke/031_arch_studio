@@ -141,7 +141,7 @@ const HomeHero = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.35 }}
+            transition={{ duration: 0.4 }}
           >
             {current.title}
           </motion.h1>
@@ -152,7 +152,7 @@ const HomeHero = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.35 }}
+            transition={{ duration: 0.4 }}
           >
             {current.description}
           </motion.p>
