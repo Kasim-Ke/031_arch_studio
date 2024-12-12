@@ -170,7 +170,10 @@ const HomeHero = () => {
         {Object.keys(slides).map((slideKey, index) => (
           <button
             key={slideKey}
-            onClick={() => setCurrentSlide(slideKey)}
+            onClick={(event) => {
+              event.preventDefault(); // Prevent default behavior
+              setCurrentSlide(slideKey); // Change the slide
+            }}
             className={`flex justify-center items-center w-[80px] h-[80px] font-bold duration-300 ${
               currentSlide === slideKey
                 ? "bg-[#1B1D23] text-white"

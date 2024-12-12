@@ -1,7 +1,18 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import welcomDektop from "./desktop/image-welcome.jpg";
 
 const HomeSection = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   const headingVariants = {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
@@ -26,14 +37,17 @@ const HomeSection = () => {
   };
 
   return (
-    <div className="lg:max-w-[1440px] md:max-w-[768px] max-w-[375px] h-full my-[80px] mx-auto">
+    <div
+      ref={ref}
+      className="lg:max-w-[1440px] md:max-w-[768px] max-w-[375px] h-full my-[80px] mx-auto"
+    >
       <div className="relative lg:w-[1110px] lg:h-[655px] md:w-[581px] md:h-[570px] w-[311px] h-[627px] flex justify-between flex-col items-start mx-auto">
         {/* Large Welcome Heading */}
         <motion.h1
           className="lg:absolute lg:top-[-90px] lg:text-[250px] md:text-[120px] font-bold md:text-[#EEEFF4] md:block hidden z-10"
           variants={headingVariants}
           initial="hidden"
-          animate="visible"
+          animate={controls}
         >
           Welcome
         </motion.h1>
@@ -44,7 +58,7 @@ const HomeSection = () => {
             className="md:text-[72px] md:leading-[64px] text-[48px] leading-[52px] tracking-[-1.71px] font-bold md:tracking-[-2px] md:py-0 py-5 z-20 text-[#1B1D23]"
             variants={secondaryHeadingVariants}
             initial="hidden"
-            animate="visible"
+            animate={controls}
           >
             Welcome to Arch Studio
           </motion.h2>
@@ -59,7 +73,7 @@ const HomeSection = () => {
                 key={index}
                 variants={paragraphVariants}
                 initial="hidden"
-                animate="visible"
+                animate={controls}
                 custom={index}
               >
                 {paragraph}
@@ -75,7 +89,7 @@ const HomeSection = () => {
           alt="welcomDektop"
           variants={imageVariants}
           initial="hidden"
-          animate="visible"
+          animate={controls}
         />
       </div>
     </div>

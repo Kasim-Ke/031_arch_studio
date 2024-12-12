@@ -13,7 +13,8 @@
     "arch_studio": "file:",
     "motion": "^11.14.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-intersection-observer": "^9.13.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
