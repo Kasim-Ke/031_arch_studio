@@ -5,11 +5,13 @@ import welcomDektop from "./desktop/image-welcome.jpg";
 
 const HomeSection = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.1 }); // Allows animation replay
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden"); // Reset animations when out of view
     }
   }, [controls, inView]);
 
@@ -67,7 +69,7 @@ const HomeSection = () => {
             {[
               "We have a unique network and skillset to help bring your projects to life. Our small team of highly skilled individuals combined with our large network put us in a strong position deliver exceptional results.",
               "Over the past 10 years, we have worked on all kinds of projects. From stations to high-rise buildings, we create spaces that inspire and delight.",
-              "We work closely with our clients so that we understand the intricacies of each project. This allows us to work in harmony the surrounding area to create truly stunning projects that will stand the test of time.",
+              "We work closely with our clients so that we understand the intricacies of each project. This allows us to work in harmony with the surrounding area to create truly stunning projects that will stand the test of time.",
             ].map((paragraph, index) => (
               <motion.p
                 key={index}

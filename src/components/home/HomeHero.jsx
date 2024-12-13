@@ -65,36 +65,42 @@ const HomeHero = () => {
   }, []);
 
   useEffect(() => {
-    AOS.refresh();
+    AOS.refreshHard(); // Refresh AOS animations for the new slide
   }, [currentSlide]);
 
   return (
     <div className="relative lg:max-w-[1440px] md:max-w-[768px] max-w-[375px] h-full flex justify-center items-center mx-auto">
       {/* Image Container with Overlay */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-black/35 z-20" data-aos="fade-up" />
+      <div key={currentSlide} className="relative">
+        <div
+          className="absolute inset-0 bg-black/35 z-20"
+          data-aos="fade-right"
+        />
         <img
           className="lg:block hidden object-cover"
           src={current.desktopImage}
           alt={`${currentSlide} Desktop`}
-          data-aos="fade-up"
+          data-aos="fade-right"
         />
         <img
           className="md:block lg:hidden hidden object-cover"
           src={current.tabletImage}
           alt={`${currentSlide} Tablet`}
-          data-aos="fade-up"
+          data-aos="fade-right"
         />
         <img
           className="block md:hidden object-cover"
           src={current.mobileImage}
           alt={`${currentSlide} Mobile`}
-          data-aos="fade-up"
+          data-aos="fade-right"
         />
       </div>
 
       {/* Content Section */}
-      <div className="absolute lg:w-[544px] md:w-[457px] md:h-[355px] md:top-[180px] lg:left-[355px] md:left-[155px] w-[311px] h-[304px] flex flex-col justify-between items-start text-white z-30">
+      <div
+        key={`${currentSlide}-content`}
+        className="absolute lg:w-[544px] md:w-[457px] md:h-[355px] md:top-[180px] lg:left-[355px] md:left-[155px] w-[311px] h-[304px] flex flex-col justify-between items-start text-white z-30"
+      >
         <h1
           data-aos="fade-down"
           className="font-bold md:text-[96px] md:leading-[80px] md:tracking-[-2px] text-[48px] leading-[48px] tracking-[-1.2px]"
@@ -116,14 +122,11 @@ const HomeHero = () => {
       </div>
 
       {/* Navigation Buttons */}
-      <div className="absolute hidden left-[85px] top-[640px] w-[320px] h-[80px] z-40 lg:flex justify-between items-center">
+      <div className="absolute hidden left-[85px] top-[642px] w-[320px] h-[80px] z-40 lg:flex justify-between items-center">
         {Object.keys(slides).map((slideKey, index) => (
           <button
             key={slideKey}
-            onClick={(event) => {
-              event.preventDefault();
-              setCurrentSlide(slideKey);
-            }}
+            onClick={() => setCurrentSlide(slideKey)}
             className={`flex justify-center items-center w-[80px] h-[80px] font-bold duration-300 ${
               currentSlide === slideKey
                 ? "bg-[#1B1D23] text-white"
@@ -134,11 +137,13 @@ const HomeHero = () => {
           </button>
         ))}
       </div>
-
       {/* Rotated HOME Section */}
-      <div className="absolute hidden top-0 left-[-100px] lg:w-[272px] lg:h-[24px] lg:flex items-center justify-between rotate-90">
-        <hr className="w-[104px]" />
-        <h3 className="text-[24px] leading-[24px] tracking-[18px] text-[#C8CCD8]">
+      <div className="absolute hidden top-0 left-[-100px] lg:w-[272px] lg:h-[24px] md:flex items-center justify-between rotate-90">
+        <hr data-aos="fade-right" className="w-[104px]" />
+        <h3
+          data-aos="fade-left"
+          className="text-[24px] leading-[24px] tracking-[18px] text-[#C8CCD8]"
+        >
           HOME
         </h3>
       </div>
