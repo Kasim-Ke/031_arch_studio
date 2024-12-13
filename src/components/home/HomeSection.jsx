@@ -65,10 +65,17 @@ const HomeSection = () => {
             Welcome to Arch Studio
           </motion.h2>
 
-          <motion.div className="lg:h-[312px] md:h-[280px] h-full text-[#60636D] flex flex-col justify-between lg:leading-[24px]">
+          <motion.div
+            className="lg:h-[342px]
+          py-5 md:h-[280px] h-full text-[#60636D] flex flex-col justify-between lg:leading-[24px]"
+          >
             {[
               "We have a unique network and skillset to help bring your projects to life. Our small team of highly skilled individuals combined with our large network put us in a strong position deliver exceptional results.",
+              " \n",
+
               "Over the past 10 years, we have worked on all kinds of projects. From stations to high-rise buildings, we create spaces that inspire and delight.",
+              " \n",
+
               "We work closely with our clients so that we understand the intricacies of each project. This allows us to work in harmony with the surrounding area to create truly stunning projects that will stand the test of time.",
             ].map((paragraph, index) => (
               <motion.p
