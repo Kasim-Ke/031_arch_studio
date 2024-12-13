@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "arch_studio": "file:",
     "motion": "^11.14.0",
     "react": "^18.3.1",

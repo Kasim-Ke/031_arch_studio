@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import arrow from "../navfoot/icons/icon-arrow.svg";
 
@@ -59,105 +60,54 @@ const HomeHero = () => {
 
   const current = slides[currentSlide];
 
-  const imageVariants = {
-    initial: { opacity: 0, x: 100 },
-    animate: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: -100 },
-  };
+  useEffect(() => {
+    AOS.init({ duration: 1300 });
+  }, []);
 
-  const overlayVariants = {
-    initial: { opacity: 0.2, x: 100 },
-    animate: { opacity: 0.2, x: 0 },
-    exit: { opacity: 0.2, x: -100 },
-  };
-
-  const titleVariants = {
-    initial: { opacity: 0, y: -50 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -50 },
-  };
-
-  const descriptionVariants = {
-    initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 50 },
-  };
+  useEffect(() => {
+    AOS.refresh();
+  }, [currentSlide]);
 
   return (
     <div className="relative lg:max-w-[1440px] md:max-w-[768px] max-w-[375px] h-full flex justify-center items-center mx-auto">
-      {/* Image Container with Animated Overlay */}
+      {/* Image Container with Overlay */}
       <div className="relative">
-        <motion.div
-          className="absolute inset-0 bg-black z-10"
-          key={currentSlide + "Overlay"}
-          variants={overlayVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.6 }}
-        />
-        <motion.img
+        <div className="absolute inset-0 bg-black/35 z-20" data-aos="fade-up" />
+        <img
           className="lg:block hidden object-cover"
           src={current.desktopImage}
           alt={`${currentSlide} Desktop`}
-          key={currentSlide + "Desktop"}
-          variants={imageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.6 }}
+          data-aos="fade-up"
         />
-        <motion.img
+        <img
           className="md:block lg:hidden hidden object-cover"
           src={current.tabletImage}
           alt={`${currentSlide} Tablet`}
-          key={currentSlide + "Tablet"}
-          variants={imageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.6 }}
+          data-aos="fade-up"
         />
-        <motion.img
+        <img
           className="block md:hidden object-cover"
           src={current.mobileImage}
           alt={`${currentSlide} Mobile`}
-          key={currentSlide + "Mobile"}
-          variants={imageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ duration: 0.6 }}
+          data-aos="fade-up"
         />
       </div>
 
       {/* Content Section */}
-      <div className="absolute lg:w-[544px] md:w-[457px] md:h-[355px] md:top-[180px] lg:left-[355px] md:left-[155px] w-[311px] h-[304px] flex flex-col justify-between items-start text-white">
-        <AnimatePresence mode="wait">
-          <motion.h1
-            key={`${currentSlide}-title`}
-            className="font-bold md:text-[96px] md:leading-[80px] md:tracking-[-2px] text-[48px] leading-[48px] tracking-[-1.2px] z-10"
-            variants={titleVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.6 }}
-          >
-            {current.title}
-          </motion.h1>
-          <motion.p
-            key={`${currentSlide}-description`}
-            className="lg:w-[445px] text-[18px] leading-[24px] z-10"
-            variants={descriptionVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.6 }}
-          >
-            {current.description}
-          </motion.p>
-        </AnimatePresence>
-        <button className="w-[252px] h-[72px] bg-[#1B1D23] hover:bg-[#60636D] duration-300 z-10">
+      <div className="absolute lg:w-[544px] md:w-[457px] md:h-[355px] md:top-[180px] lg:left-[355px] md:left-[155px] w-[311px] h-[304px] flex flex-col justify-between items-start text-white z-30">
+        <h1
+          data-aos="fade-down"
+          className="font-bold md:text-[96px] md:leading-[80px] md:tracking-[-2px] text-[48px] leading-[48px] tracking-[-1.2px]"
+        >
+          {current.title}
+        </h1>
+        <p
+          data-aos="fade-up"
+          className="lg:w-[445px] text-[18px] leading-[24px]"
+        >
+          {current.description}
+        </p>
+        <button className="w-[252px] h-[72px] bg-[#1B1D23] hover:bg-[#60636D] duration-300">
           <div className="w-[183px] flex justify-between items-center mx-auto font-bold text-[18px]">
             <p>See Our Portfolio</p>
             <img src={arrow} alt="arrow" />
@@ -171,8 +121,8 @@ const HomeHero = () => {
           <button
             key={slideKey}
             onClick={(event) => {
-              event.preventDefault(); // Prevent default behavior
-              setCurrentSlide(slideKey); // Change the slide
+              event.preventDefault();
+              setCurrentSlide(slideKey);
             }}
             className={`flex justify-center items-center w-[80px] h-[80px] font-bold duration-300 ${
               currentSlide === slideKey
