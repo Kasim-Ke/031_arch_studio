@@ -5,7 +5,7 @@ import welcomDektop from "./desktop/image-welcome.jpg";
 
 const HomeSection = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.1 }); // Allows animation replay
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 }); // Allows animation replay
 
   useEffect(() => {
     if (inView) {
@@ -29,7 +29,7 @@ const HomeSection = () => {
     hidden: { opacity: 0 },
     visible: (i) => ({
       opacity: 1,
-      transition: { duration: 0.8, delay: i * 0.3 + 0.8 },
+      transition: { duration: 0.6, delay: i * 0.3 + 0.4 },
     }),
   };
 
