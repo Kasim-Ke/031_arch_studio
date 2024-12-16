@@ -3,6 +3,7 @@ import HomeSection from "./components/home/HomeSection";
 import HomeMid from "./components/home/HomeMid";
 import Navbar from "./components/navfoot/Navbar";
 import HomeFeatured from "./components/home/HomeFeatured";
+import Footer from "./components/navfoot/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <HomeSection />
       <HomeMid />
       <HomeFeatured />
+      <Footer />
     </>
   );
 }
