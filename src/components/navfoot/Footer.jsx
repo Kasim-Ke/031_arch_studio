@@ -20,7 +20,7 @@ const Footer = () => {
               alt="logo2"
             />
           </div>
-          <div className="lg:w-[373px] md:w-[300px] md:ml-[80px] md:h-full  text-[18px] w-[72px] h-[160px] flex flex-col md:flex-row justify-between items-center font-bold  my-[30%]">
+          <div className="lg:w-[373px] md:w-[300px] md:ml-[80px] md:h-full  text-[18px] w-[82px] h-[160px] flex flex-col md:flex-row justify-between items-center font-bold  my-[30%]">
             <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
               Home
             </button>
