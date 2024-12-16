@@ -2,18 +2,19 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import welcomDektop from "./desktop/image-welcome.jpg";
+import { useState } from "react";
 
 const HomeSection = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 }); // Allows animation replay
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 }); // Keep triggerOnce true
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !hasAnimated) {
       controls.start("visible");
-    } else {
-      controls.start("hidden"); // Reset animations when out of view
+      setHasAnimated(true); // Ensure animation triggers only once
     }
-  }, [controls, inView]);
+  }, [controls, inView, hasAnimated]);
 
   const headingVariants = {
     hidden: { opacity: 0, y: -50 },
