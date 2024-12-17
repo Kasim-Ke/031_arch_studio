@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -113,12 +114,14 @@ const HomeHero = () => {
         >
           {current.description}
         </p>
-        <button className="w-[252px] h-[72px] bg-[#1B1D23] hover:bg-[#60636D] duration-300">
-          <div className="w-[183px] flex justify-between items-center mx-auto font-bold text-[18px]">
-            <p>See Our Portfolio</p>
-            <img src={arrow} alt="arrow" />
-          </div>
-        </button>
+        <Link to="/portfolio">
+          <button className="w-[252px] h-[72px] bg-[#1B1D23] hover:bg-[#60636D] duration-300">
+            <div className="w-[183px] flex justify-between items-center mx-auto font-bold text-[18px]">
+              <p>See Our Portfolio</p>
+              <img src={arrow} alt="arrow" />
+            </div>
+          </button>
+        </Link>
       </div>
 
       {/* Navigation Buttons */}

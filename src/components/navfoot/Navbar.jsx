@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import logo from "./logo.svg";
 import burger from "./icons/icon-hamburger.svg";
@@ -11,9 +12,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="  flex flex-col mx-auto">
+    <div className="flex flex-col mx-auto">
       <div className="lg:max-w-[1440px] lg:h-[150px] md:max-w-[768px] max-w-[375px] h-[100px] flex flex-col justify-center items-center mx-auto">
-        <div className="  lg:w-[1110px] lg:h-[40px]">
+        <div className="lg:w-[1110px] lg:h-[40px]">
           <div className="lg:w-[554px] md:w-[500px] w-[311px] mx-6 flex justify-between font-bold">
             <img src={logo} alt="logo" />
             <button
@@ -23,12 +24,18 @@ const Navbar = () => {
               <img src={burger} alt="burger" />
             </button>
             <div className="lg:w-[373px] lg:text-[18px] md:w-[300px] hidden md:flex justify-between items-center">
-              <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
+              <Link
+                to="/"
+                className="text-[#7D828F] hover:text-[#1B1D23] duration-300"
+              >
                 Home
-              </button>
-              <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
+              </Link>
+              <Link
+                to="/portfolio"
+                className="text-[#7D828F] hover:text-[#1B1D23] duration-300"
+              >
                 Portfolio
-              </button>
+              </Link>
               <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
                 About Us
               </button>
@@ -40,13 +47,17 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={` absolute top-[100px] inset-0  z-50 navbar bg-[#EEEFF4] w-[340px] h-[235px] flex justify-center items-center mx-auto md:hidden ${
+        className={`absolute top-[100px] inset-0 z-50 navbar bg-[#EEEFF4] w-[340px] h-[235px] flex justify-center items-center mx-auto md:hidden ${
           nav ? "visible" : ""
         }`}
       >
-        <div className=" flex flex-col items-start w-[247px] h-[184px] font-bold text-[32px]">
-          <button>Home</button>
-          <button>Portfolio</button>
+        <div className="flex flex-col items-start w-[247px] h-[184px] font-bold text-[32px]">
+          <Link to="/" className="mb-4">
+            Home
+          </Link>
+          <Link to="/portfolio" className="mb-4">
+            Portfolio
+          </Link>
           <button>About Us</button>
           <button>Contact</button>
         </div>
