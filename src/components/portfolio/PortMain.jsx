@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
+
 // Importing images from the portfolio directory
 import image22abDesktop from "../portfolio/desktop/image-228b.jpg";
 import image22abTablet from "../portfolio/tablet/image-228b.jpg";
@@ -148,6 +152,16 @@ const images = [
   },
 ];
 const PortMain = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 50, // Trigger animation 100px before element enters the viewport
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-out", // Smooth easing for animations
+      once: true, // Allow retriggering when scrolling down
+      mirror: false, // Prevent triggering on scroll up
+    });
+  }, []);
+
   return (
     <div className="relative lg:max-w-[1440px] md:max-w-[768px] max-w-[375px] h-full flex justify-center items-center mx-auto">
       <div className="lg:w-[1110px] grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1">
@@ -155,7 +169,10 @@ const PortMain = () => {
           return (
             <div key={index} className="relative flex flex-col items-center">
               {/* Desktop Image */}
-              <button className="group relative w-[350px] h-[560px] mb-4 lg:block hidden hover:scale-105 duration-300">
+              <button
+                data-aos="fade-right"
+                className="group relative w-[350px] h-[560px] mb-4 lg:block hidden hover:scale-105 duration-300"
+              >
                 <img
                   className="object-cover w-full h-full shadow-lg"
                   src={image.desktop}
@@ -163,24 +180,33 @@ const PortMain = () => {
                 />
                 <div className="absolute inset-0 bg-black/35 group-hover:bg-black/75 duration-300 flex flex-col justify-center items-center">
                   {/* Name */}
-                  <h2 className="text-white font-bold text-[32px] absolute bottom-5 left-[5%] group-hover:opacity-0 duration-300">
+                  <h2
+                    data-aos="fade-left"
+                    className="text-white font-bold text-[32px] absolute bottom-5 left-[5%] group-hover:opacity-0 duration-300"
+                  >
                     {image.name}
                   </h2>
                   {/* Description */}
-                  <p className="text-white text-[24px] font-medium text-center px-4 opacity-0 group-hover:opacity-100 duration-300">
+                  <p className="text-white text-[24px] font-medium text-center px-4 opacity-0 group-hover:opacity-100 duration-300 ">
                     {image.description}
                   </p>
                 </div>
               </button>
               {/* Tablet Image */}
-              <button className="group relative w-[573px] h-[240px] mb-4 lg:hidden md:block hidden hover:scale-105 duration-300">
+              <button
+                data-aos="fade-right"
+                className="group relative w-[573px] h-[240px] mb-4 lg:hidden md:block hidden hover:scale-105 duration-300"
+              >
                 <img
                   className="object-cover w-full h-full shadow-lg"
                   src={image.tablet}
                   alt={`${image.name} Tablet`}
                 />
                 <div className="absolute inset-0 bg-black/35 group-hover:bg-black/75 duration-300 flex flex-col justify-center items-center">
-                  <h2 className="text-white font-bold text-[28px] absolute bottom-5 left-[5%] group-hover:opacity-0 duration-300">
+                  <h2
+                    data-aos="fade-left"
+                    className="text-white font-bold text-[28px] absolute bottom-5 left-[5%] group-hover:opacity-0 duration-300"
+                  >
                     {image.name}
                   </h2>
                   <p className="text-white text-[24px] font-medium text-center px-4 opacity-0 group-hover:opacity-100 duration-300">
@@ -190,7 +216,10 @@ const PortMain = () => {
               </button>
 
               {/* Mobile Image */}
-              <button className="group relative w-[311px] h-[240px] mb-4 lg:hidden md:hidden hover:scale-105 duration-300">
+              <button
+                data-aos="fade-right"
+                className="group relative w-[311px] h-[240px] mb-4 lg:hidden md:hidden hover:scale-105 duration-300"
+              >
                 <img
                   className="object-cover w-full h-full shadow-lg"
                   src={image.mobile}
@@ -199,7 +228,10 @@ const PortMain = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/35 group-hover:bg-black/75 duration-300 flex flex-col justify-center items-center">
                   {/* Title */}
-                  <h2 className="text-white font-bold text-[24px] absolute bottom-5 left-[5%] group-hover:opacity-0 duration-300">
+                  <h2
+                    data-aos="fade-left"
+                    className="text-white font-bold text-[24px] absolute bottom-5 left-[5%] group-hover:opacity-0 duration-300"
+                  >
                     {image.name}
                   </h2>
                   {/* Description */}
@@ -213,8 +245,11 @@ const PortMain = () => {
         })}
       </div>
       <div className="absolute hidden top-[80px] left-[-170px] lg:w-[423px] lg:h-[24px] md:flex items-center justify-between rotate-90">
-        <hr className="w-[104px]" />
-        <h3 className="text-[24px] leading-[24px] tracking-[18px] mx-5 text-[#C8CCD8]">
+        <hr data-aos="fade-right" className="w-[104px]" />
+        <h3
+          data-aos="fade-left"
+          className="text-[24px] leading-[24px] tracking-[18px] mx-5 text-[#C8CCD8]"
+        >
           PORTFOLIO
         </h3>
       </div>
