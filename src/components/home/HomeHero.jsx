@@ -142,10 +142,10 @@ const HomeHero = () => {
       </div>
       {/* Rotated HOME Section */}
       <div className="absolute hidden top-0 left-[-100px] lg:w-[272px] lg:h-[24px] md:flex items-center justify-between rotate-90">
-        <hr data-aos="fade-right" className="w-[104px]" />
+        <hr data-aos="fade-right" className="w-[104px] " />
         <h3
           data-aos="fade-left"
-          className="text-[24px] leading-[24px] tracking-[18px] text-[#C8CCD8]"
+          className="text-[24px] leading-[24px] tracking-[18px] mx-5 text-[#C8CCD8]"
         >
           HOME
         </h3>

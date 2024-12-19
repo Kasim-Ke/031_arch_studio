@@ -41,14 +41,15 @@ const Footer = () => {
               Contact
             </button>
           </div>
-          <Link to="/portfolio">
-            <button className="absolute lg:bottom-[70px] text-white md:right-0 md:bottom-5 bottom-0 w-[240px] h-[72px] bg-[#1B1D23] hover:bg-[#60636D] duration-300">
-              <div className="w-[183px] flex justify-between items-center mx-auto font-bold text-[18px]">
+
+          <button className="absolute lg:bottom-[70px] text-white md:right-0 md:bottom-5 bottom-0 w-[240px] h-[72px]  bg-[#1B1D23]  hover:bg-[#60636D] duration-300">
+            <Link to="/portfolio">
+              <div className="w-[183px]  flex justify-between items-center mx-auto font-bold text-[18px]">
                 <p>See Our Portfolio</p>
                 <img src={arrow} alt="arrow" />
               </div>
-            </button>
-          </Link>
+            </Link>
+          </button>
         </div>
       </div>
     </div>

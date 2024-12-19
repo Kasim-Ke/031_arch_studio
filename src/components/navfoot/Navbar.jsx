@@ -11,6 +11,10 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  const closeNavBar = () => {
+    setNav(false);
+  };
+
   return (
     <div className="flex flex-col mx-auto">
       <div className="lg:max-w-[1440px] lg:h-[150px] md:max-w-[768px] max-w-[375px] h-[100px] flex flex-col justify-center items-center mx-auto">
@@ -48,14 +52,14 @@ const Navbar = () => {
       </div>
       <div
         className={`absolute top-[100px] inset-0 z-50 navbar bg-[#EEEFF4] w-[340px] h-[235px] flex justify-center items-center mx-auto md:hidden ${
-          nav ? "visible" : ""
+          nav ? "visible" : "invisible"
         }`}
       >
         <div className="flex flex-col items-start w-[247px] h-[184px] font-bold text-[32px]">
-          <Link to="/" className="mb-4">
+          <Link onClick={closeNavBar} to="/" className="mb-4">
             Home
           </Link>
-          <Link to="/portfolio" className="mb-4">
+          <Link onClick={closeNavBar} to="/portfolio" className="mb-4">
             Portfolio
           </Link>
           <button>About Us</button>
