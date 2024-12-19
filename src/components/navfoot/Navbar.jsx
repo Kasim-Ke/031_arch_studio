@@ -51,11 +51,11 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`absolute top-[100px] inset-0 z-50 navbar bg-[#EEEFF4] w-[340px] h-[235px] flex justify-center items-center mx-auto md:hidden ${
+        className={`absolute top-[100px] inset-0 z-50 navbar bg-[#EEEFF4] w-[330px] h-[275px] flex justify-center items-center mx-auto md:hidden ${
           nav ? "visible" : "invisible"
         }`}
       >
-        <div className="flex flex-col items-start w-[247px] h-[184px] font-bold text-[32px]">
+        <div className="flex flex-col items-start w-[247px] h-[204px] font-bold text-[32px]">
           <Link onClick={closeNavBar} to="/" className="mb-4">
             Home
           </Link>
