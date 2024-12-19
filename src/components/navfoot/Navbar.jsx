@@ -40,9 +40,12 @@ const Navbar = () => {
               >
                 Portfolio
               </Link>
-              <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
+              <Link
+                to="/about"
+                className="text-[#7D828F] hover:text-[#1B1D23] duration-300"
+              >
                 About Us
-              </button>
+              </Link>
               <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
                 Contact
               </button>
@@ -62,7 +65,10 @@ const Navbar = () => {
           <Link onClick={closeNavBar} to="/portfolio" className="mb-4">
             Portfolio
           </Link>
-          <button>About Us</button>
+
+          <Link onClick={closeNavBar} to="/about" className="mb-4">
+            About Us
+          </Link>
           <button>Contact</button>
         </div>
       </div>

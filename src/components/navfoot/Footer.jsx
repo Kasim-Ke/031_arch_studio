@@ -34,9 +34,12 @@ const Footer = () => {
             >
               Portfolio
             </Link>
-            <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
+            <Link
+              to="/about"
+              className="text-[#7D828F] hover:text-[#1B1D23] duration-300"
+            >
               About Us
-            </button>
+            </Link>
             <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
               Contact
             </button>

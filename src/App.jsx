@@ -8,6 +8,7 @@ import Footer from "./components/navfoot/Footer";
 import { Routes, Route } from "react-router-dom";
 import PortMain from "./components/portfolio/PortMain";
 import ScrollToTop from "./components/ScrollToTop";
+import AboutHero from "./components/about/AboutHero";
 
 function App() {
   return (
@@ -34,6 +35,14 @@ function App() {
           element={
             <>
               <PortMain />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <AboutHero />
             </>
           }
         />

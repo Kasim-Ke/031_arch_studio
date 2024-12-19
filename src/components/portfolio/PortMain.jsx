@@ -181,7 +181,7 @@ const PortMain = () => {
                 <div className="absolute inset-0 bg-black/35 group-hover:bg-black/75 duration-300 flex flex-col justify-center items-center">
                   {/* Name */}
                   <h2
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     className="text-white font-bold text-[32px] absolute bottom-5 left-[5%] group-hover:opacity-0 duration-300"
                   >
                     {image.name}
@@ -204,7 +204,7 @@ const PortMain = () => {
                 />
                 <div className="absolute inset-0 bg-black/35 group-hover:bg-black/75 duration-300 flex flex-col justify-center items-center">
                   <h2
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     className="text-white font-bold text-[28px] absolute bottom-5 left-[5%] group-hover:opacity-0 duration-300"
                   >
                     {image.name}
