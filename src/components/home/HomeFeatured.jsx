@@ -48,7 +48,7 @@ const HomeFeatured = () => {
           {/* Project Del Sol */}
           <div
             className="lg:h-full lg:w-[350px] md:w-[573px] w-full h-[240px] relative"
-            data-aos="fade-right"
+            data-aos="fade-up"
           >
             <picture>
               <source srcSet={delDektop} media="(min-width: 1324px)" />
@@ -76,7 +76,7 @@ const HomeFeatured = () => {
           {/* 228B Tower */}
           <div
             className="lg:h-full lg:w-[350px] md:w-[573px] w-full h-[240px] relative"
-            data-aos="fade-up"
+            data-aos="fade-right"
           >
             <picture>
               <source srcSet={TowDektop} media="(min-width: 1324px)" />
@@ -101,10 +101,10 @@ const HomeFeatured = () => {
             </div>
           </div>
 
-          {/* Le Prototype */}
+          {/* Hypers*/}
           <div
             className="lg:h-full lg:w-[350px] md:w-[573px] w-full h-[240px] relative"
-            data-aos="fade-left"
+            data-aos="fade-down"
           >
             <picture>
               <source srcSet={LeDektop} media="(min-width: 1324px)" />
