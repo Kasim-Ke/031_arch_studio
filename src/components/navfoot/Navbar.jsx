@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className="flex flex-col mx-auto">
       <div className="lg:max-w-[1440px] lg:h-[150px] md:max-w-[768px] max-w-[375px] h-[100px] flex flex-col justify-center items-center mx-auto">
         <div className="lg:w-[1110px] lg:h-[40px]">
-          <div className="lg:w-[554px] md:w-[500px] w-[311px] mx-6 flex justify-between font-bold">
+          <div className="lg:w-[554px] md:w-[500px] w-[311px] flex justify-between font-bold">
             <img src={logo} alt="logo" />
             <button
               onClick={showNavBar}
