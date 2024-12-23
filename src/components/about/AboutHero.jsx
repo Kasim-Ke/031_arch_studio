@@ -38,7 +38,7 @@ const AboutHero = () => {
           />
         </div>
         <div className="absolute lg:top-[220px] lg:right-0 md:top-[289px] md:right-[97px] lg:w-[630px] lg:h-[500px] md:w-[516px] md:h-[431px] w-[353px] h-[410px] top-[195px] bg-white z-40 flex justify-end items-end ">
-          <div className="flex flex-col items-end justify-between lg:w-[446px] lg:h-[341px] md:w-[456px] md:h-[267px] w-[311px] h-[269px]  mx-auto md:mx-0  ">
+          <div className="flex flex-col items-end justify-between lg:w-[446px] lg:h-[341px] md:w-[456px] md:h-[267px] w-[311px] h-[269px] my-[25%] md:my-0  mx-auto md:mx-0  ">
             <div className="lg:mt-[50px]">
               <h2
                 data-aos="fade-down"

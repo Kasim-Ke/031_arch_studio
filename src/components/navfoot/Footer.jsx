@@ -5,7 +5,7 @@ import logo2 from "./logo2.svg";
 const Footer = () => {
   return (
     <div className="relative lg:max-w-[1440px] md:max-w-[768px] max-w-[375px] lg:h-[400px] md:h-[320px] h-[443px] mx-auto md:my-2 flex items-end">
-      <div className="relative lg:w-[1100px] lg:h-[200px] md:w-[768px] md:h-[120px] mx-auto w-[375px] h-[383px]">
+      <div className="relative   lg:w-[1100px] lg:h-[200px] md:w-[768px] md:h-[120px] mx-auto w-[375px] h-[383px]">
         <div className="lg:w-[984px] md:w-[612px] w-full h-full bg-[#EEEFF4] flex md:flex-row flex-col items-center">
           <div className="hidden bg-[#1B1D23] lg:w-[200px] lg:h-[200px] w-[120px] h-[120px] md:flex items-center justify-center">
             <img
@@ -14,7 +14,7 @@ const Footer = () => {
               alt="logo2"
             />
           </div>
-          <div className="absolute top-[-60px] md:hidden bg-[#1B1D23] lg:w-[200px] lg:h-[200px] w-[120px] h-[120px] flex items-center justify-center">
+          <div className="absolute  top-[-60px] md:hidden bg-[#1B1D23] lg:w-[200px] lg:h-[200px] w-[120px] h-[120px] flex items-center justify-center">
             <img
               className="mx-auto lg:w-[96px] lg:h-[40px] w-[58px] h-[24px]"
               src={logo2}

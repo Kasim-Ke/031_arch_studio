@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import PortMain from "./components/portfolio/PortMain";
 import ScrollToTop from "./components/ScrollToTop";
 import AboutHero from "./components/about/AboutHero";
+import AboutHeritage from "./components/about/AboutHeritage";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           element={
             <>
               <AboutHero />
+              <AboutHeritage />
             </>
           }
         />
