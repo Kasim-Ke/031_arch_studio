@@ -25,7 +25,7 @@ const AboutLeaders = () => {
                 <h3 className="font-bold text-[32px] leading-[40px]">
                   Jake Richards
                 </h3>
-                <p>Chief Architect</p>
+                <p className="text-[#60636D]">Chief Architect</p>
               </div>
             </div>
             <div
@@ -37,7 +37,7 @@ const AboutLeaders = () => {
                 <h3 className="font-bold text-[32px] leading-[40px]">
                   Jake Richards
                 </h3>
-                <p>Head of Finance</p>
+                <p className="text-[#60636D]">Head of Finance</p>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ const AboutLeaders = () => {
                 <h3 className="font-bold text-[32px] leading-[40px]">
                   Jackson Rourke
                 </h3>
-                <p>Lead Designer</p>
+                <p className="text-[#60636D]">Lead Designer</p>
               </div>
             </div>
             <div
@@ -63,7 +63,7 @@ const AboutLeaders = () => {
                 <h3 className="font-bold text-[32px] leading-[40px]">
                   Maria Simpson
                 </h3>
-                <p>Senior Architect</p>
+                <p className="text-[#60636D]">Senior Architect</p>
               </div>
             </div>
           </div>
