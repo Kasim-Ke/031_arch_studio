@@ -3,7 +3,7 @@ import herDesk from "../about/desktop/image-heritage.jpg";
 const AboutHeritage = () => {
   return (
     <div className=" lg:max-w-[1440px] md:max-w-[768px] max-w-[375px] h-full mx-auto ">
-      <div className="relative md:top-0 top-[200px] lg:w-[1110px] lg:h-[568px] my-[200px] md:w-[574px] md:h-[485px] h-[620px] w-[311px] flex justify-between items-start mx-auto ">
+      <div className="relative md:top-0 top-[200px] lg:w-[1110px] lg:h-[568px] my-[200px] md:w-[574px] md:h-[485px] h-[620px] w-[311px] flex justify-between items-start mx-auto  ">
         <div className="lg:w-[440px] w-full h-full flex flex-col justify-between">
           <div className="mt-[65px]  w-full flex  ">
             <h2

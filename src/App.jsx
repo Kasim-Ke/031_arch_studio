@@ -10,6 +10,7 @@ import PortMain from "./components/portfolio/PortMain";
 import ScrollToTop from "./components/ScrollToTop";
 import AboutHero from "./components/about/AboutHero";
 import AboutHeritage from "./components/about/AboutHeritage";
+import AboutLeaders from "./components/about/AboutLeaders";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <>
               <AboutHero />
               <AboutHeritage />
+              <AboutLeaders />
             </>
           }
         />
