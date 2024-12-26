@@ -44,17 +44,16 @@ const ContactHero = () => {
                 data-aos="fade-down"
                 className="md:text-[72px] md:leading-[64px] md:tracking-[-2px] text-[48px] leading-[52px] tracking-[-1.2px] font-bold"
               >
-                Your team of professionals
+                Tell us about your project
               </h2>
             </div>
             <div
               data-aos="fade-up"
               className="text-[18px] leading-[24px] text-[#60636D]"
             >
-              Our small team of world-class professionals will work with you
-              every step of the way. Strong relationships are at the core of
-              everything we do. This extends to the relationship our projects
-              have with their surroundings.
+              We’d love to hear more about your project. Please, leave a message
+              below or give us a call. We have two offices, one in Texas and one
+              in Tennessee. If you find yourself nearby, come say hello!
             </div>
           </div>
         </div>
