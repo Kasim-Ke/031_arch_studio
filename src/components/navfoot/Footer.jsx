@@ -40,9 +40,12 @@ const Footer = () => {
             >
               About Us
             </Link>
-            <button className="text-[#7D828F] hover:text-[#1B1D23] duration-300">
+            <Link
+              to="/contact"
+              className="text-[#7D828F] hover:text-[#1B1D23] duration-300"
+            >
               Contact
-            </button>
+            </Link>
           </div>
 
           <button className="absolute lg:bottom-[70px] text-white md:right-0 md:bottom-5 bottom-0 w-[240px] h-[72px]  bg-[#1B1D23]  hover:bg-[#60636D] duration-300">

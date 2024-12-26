@@ -11,6 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import AboutHero from "./components/about/AboutHero";
 import AboutHeritage from "./components/about/AboutHeritage";
 import AboutLeaders from "./components/about/AboutLeaders";
+import ContactHero from "./components/contact/ContactHero";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             </>
           }
         />
+        {/* About Page */}
         <Route
           path="/about"
           element={
@@ -47,6 +49,15 @@ function App() {
               <AboutHero />
               <AboutHeritage />
               <AboutLeaders />
+            </>
+          }
+        />
+        {/* Contact Page */}
+        <Route
+          path="/contact"
+          element={
+            <>
+              <ContactHero />
             </>
           }
         />

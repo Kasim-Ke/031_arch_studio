@@ -1,12 +1,12 @@
+import conDesktop from "./desktop/image-hero.jpg";
+import conTablet from "./tablet/image-hero.jpg";
+import conMobile from "./mobile/image-hero.jpg";
+
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
-import aboutDesktop from "./desktop/image-hero.jpg";
-import aboutTablet from "./tablet/image-hero.jpg";
-import aboutMobilep from "./mobile/image-hero.jpg";
-
-const AboutHero = () => {
+const ContactHero = () => {
   useEffect(() => {
     AOS.init({
       offset: 50, // Trigger animation 100px before element enters the viewport
@@ -23,17 +23,17 @@ const AboutHero = () => {
           <div className="absolute inset-0 bg-black/35 z-20" />
           <img
             className="lg:block hidden object-cover"
-            src={aboutDesktop}
+            src={conDesktop}
             alt="Desktop"
           />
           <img
             className="md:block lg:hidden hidden object-cover"
-            src={aboutTablet}
+            src={conTablet}
             alt="Tablet"
           />
           <img
             className="block md:hidden object-cover "
-            src={aboutMobilep}
+            src={conMobile}
             alt="Mobile"
           />
         </div>
@@ -60,9 +60,9 @@ const AboutHero = () => {
         </div>
         <div
           data-aos="fade-down"
-          className="absolute lg:top-[135px] lg:left-[460px] md:top-[200px] md:left-[350px]  lg:text-[250px]  md:leading-[200px]   md:tracking-[-3px] md:text-[120px] font-bold text-[#EEEFF4] md:block hidden z-50"
+          className="absolute lg:top-[135px] lg:left-[250px] md:top-[200px] md:left-[280px]  lg:text-[250px]  md:leading-[200px]   md:tracking-[-5px] md:text-[120px] font-bold text-[#EEEFF4] md:block hidden z-50"
         >
-          About
+          Contact
         </div>
       </div>
       <div className="absolute hidden top-[80px] left-[-168px] lg:w-[400px] lg:h-[4px] md:flex items-center justify-between rotate-90">
@@ -71,11 +71,11 @@ const AboutHero = () => {
           data-aos="fade-left"
           className="text-[24px] leading-[24px] tracking-[18px] mx-5 text-[#C8CCD8]"
         >
-          ABOUT US
+          CONTACT
         </h3>
       </div>
     </div>
   );
 };
 
-export default AboutHero;
+export default ContactHero;
