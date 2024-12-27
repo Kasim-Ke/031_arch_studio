@@ -36,11 +36,14 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="lg:w-[1110px] lg:h-[270px] md:w-[573px] md:h-[450px] w-[311px] h-[500px] my-[100px] mx-auto">
-      <div className="h-full flex lg:flex-row flex-col justify-between items-center">
-        <h1 className="md:text-[72px] md:leading-[64px] md:tracking-[-2px] text-[48px] leading-[52px] tracking-[-1.71px] font-bold">
-          Connect <span className="block mx-5">with us</span>
-        </h1>
+    <div className="lg:w-[1110px] lg:h-[270px] md:w-[573px] md:h-[450px] w-[311px] h-[400px] mt-[100px] md:mb-0 mb-[100px] mx-auto">
+      <div className="h-full flex lg:flex-row flex-col justify-between lg:items-start items-center">
+        <div>
+          <h1 className="md:text-[72px] md:leading-[64px] md:tracking-[-2px] text-[48px] leading-[52px] tracking-[-1.71px] font-bold">
+            Connect <span className="block mx-5">with us</span>
+          </h1>
+        </div>
+
         <div className="w-full lg:w-1/2">
           <form onSubmit={handleSubmit}>
             <div className="mb-4 relative">

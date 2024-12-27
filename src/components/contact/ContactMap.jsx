@@ -6,7 +6,7 @@ const ContactMap = () => {
   return (
     <div
       data-aos="fade"
-      className="lg:w-[1110px]  md:w-[573px]  w-[311px] mx-auto "
+      className="lg:w-[1110px]  md:w-[573px]  w-[311px] mx-auto my-11"
     >
       <img
         className="lg:block hidden object-cover"
