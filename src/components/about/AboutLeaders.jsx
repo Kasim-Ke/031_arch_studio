@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 const AboutLeaders = () => {
   return (
     <div className="lg:max-w-[1440px] md:max-w-[768px] max-w-[375px] mx-auto">
-      <div className="lg:w-[1110px] lg:h-[862px] md:w-[574px] md:h-[950px] h-[1900px] py-[60px] w-[311px] flex lg:flex-row flex-col justify-between items-start mx-auto">
+      <div className="lg:w-[1110px] lg:h-[862px] md:w-[574px] md:h-[950px] h-[1900px] py-[60px] w-[311px] flex lg:flex-row flex-col justify-between items-start mx-auto pt-[100px] ">
         <div
           data-aos="fade-down"
           className="lg:w-[380px] md:w-[446px] md:text-[72px] w-[311px] text-[48px] leading-[52px] tracking-[-1.71px] md:leading-[64px] md:tracking-[-2px] font-bold md:pb-9"
