@@ -12,6 +12,9 @@ import AboutHero from "./components/about/AboutHero";
 import AboutHeritage from "./components/about/AboutHeritage";
 import AboutLeaders from "./components/about/AboutLeaders";
 import ContactHero from "./components/contact/ContactHero";
+import ContactDetail from "./components/contact/ContactDetail";
+import ContactMap from "./components/contact/ContactMap";
+import ContactForm from "./components/contact/ContactForm";
 
 function App() {
   return (
@@ -58,6 +61,9 @@ function App() {
           element={
             <>
               <ContactHero />
+              <ContactDetail />
+              <ContactMap />
+              <ContactForm />
             </>
           }
         />
